@@ -1,12 +1,14 @@
+const perfumeAsset = (file) =>
+  `${location.protocol === 'file:' ? 'public/' : '/'}assets/perfumes/${file}`;
+
 const products = [
-  { id:0, name:'Noir Intense', short:'NOIR', category:'unisex noche', gender:'Unisex', price:1390, description:'Oscura, elegante y adictiva. Una fragancia nocturna con salida cítrica, corazón ambarado y fondo amaderado.', notes:['Bergamota','Ámbar','Cedro'], halo:'radial-gradient(circle,#b76378 0%,#71283d 44%,#32121d 72%)', bottle:'linear-gradient(110deg,#592031,#170b11)', color:'#6c243a' },
-  { id:1, name:'Aura Bloom', short:'AURA', category:'mujer fresco', gender:'Mujer', price:1290, description:'Luminosa, floral y limpia. Diseñada para diario, oficina o cualquier momento donde quieras oler fresca sin pasar desapercibida.', notes:['Pera','Peonía','Almizcle'], halo:'radial-gradient(circle,#e6c2ec 0%,#af78bd 45%,#6c397a 72%)', bottle:'linear-gradient(110deg,#aa63b4,#481a58)', color:'#7f3e90' },
-  { id:2, name:'Ember Reserve', short:'EMBER', category:'unisex noche', gender:'Unisex', price:1490, description:'Gourmand sofisticada y envolvente. Vainilla tostada, tonka y café con una base cálida perfecta para noche o clima fresco.', notes:['Vainilla','Tonka','Café'], halo:'radial-gradient(circle,#d7a06a 0%,#9b562a 45%,#4d2410 72%)', bottle:'linear-gradient(110deg,#a45b26,#3b1709)', color:'#985022' },
-  { id:3, name:'Ocean Veil', short:'OCEAN', category:'hombre fresco', gender:'Hombre', price:1350, description:'Fresca, mineral y pulida. Una fragancia versátil para calor, trabajo y uso diario con fondo limpio y elegante.', notes:['Neroli','Sal marina','Vetiver'], halo:'radial-gradient(circle,#9bdae8 0%,#4f9bb2 45%,#145064 72%)', bottle:'linear-gradient(110deg,#3a9aae,#0e4154)', color:'#23778e' },
-  { id:4, name:'Velvet Cherry', short:'CHERRY', category:'mujer noche', gender:'Mujer', price:1590, description:'Cereza negra, rosa oscura y vainilla. Dulce sin ser infantil, intensa sin sentirse pesada.', notes:['Cereza negra','Rosa','Vainilla'], halo:'radial-gradient(circle,#d56a82 0%,#8f2642 48%,#40111f 74%)', bottle:'linear-gradient(110deg,#9e2549,#3a0c1c)', color:'#9b2b4b' },
-  { id:5, name:'Santal 07', short:'SANTAL', category:'unisex', gender:'Unisex', price:1690, description:'Sándalo cremoso, iris y cardamomo. Minimalista, seco y elegante para quienes prefieren aromas de nicho.', notes:['Sándalo','Iris','Cardamomo'], halo:'radial-gradient(circle,#d6c4a9 0%,#a17d5e 48%,#59402b 74%)', bottle:'linear-gradient(110deg,#8f745b,#473222)', color:'#806247' },
-  { id:6, name:'Citrus Atelier', short:'CITRUS', category:'hombre fresco', gender:'Hombre', price:1190, description:'Mandarina, té verde y vetiver. Ligera, energética y muy fácil de usar todos los días.', notes:['Mandarina','Té verde','Vetiver'], halo:'radial-gradient(circle,#e5d36f 0%,#9ea34f 48%,#485226 74%)', bottle:'linear-gradient(110deg,#8f9b42,#3a4722)', color:'#7d8b3d' },
-  { id:7, name:'Rose Musk', short:'ROSE', category:'mujer', gender:'Mujer', price:1320, description:'Rosa suave, lichi y almizcle. Delicada, moderna y limpia; perfecta para regalo o primera fragancia premium.', notes:['Lichi','Rosa','Musk'], halo:'radial-gradient(circle,#f2c8cf 0%,#cc8999 48%,#85485a 74%)', bottle:'linear-gradient(110deg,#d18899,#783849)', color:'#a45a6d' },
+  { id:0, brand:'Lattafa', name:'Khamrah', short:'KHAMRAH', word:'KHAMRAH', category:'unisex noche', gender:'Unisex', concentration:'EDP', size:'100 ml', price:699, image:perfumeAsset('khamrah.webp'), heroImage:perfumeAsset('khamrah-bottle.webp'), description:'Dulce, especiada y envolvente. Canela, dátiles y praliné se funden con vainilla y tonka para una estela intensa que luce mejor de noche o en clima fresco.', notes:['Canela · Bergamota','Dátiles · Praliné','Vainilla · Tonka'], tags:['CANELA','DÁTILES','VAINILLA'], halo:'radial-gradient(circle,#e5ae55 0%,#a94f1a 45%,#35130d 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(223,160,58,.24) 0%,rgba(124,45,18,.13) 29%,transparent 52%),linear-gradient(120deg,#4a1722 0%,#1b0d10 58%,#080708 100%)', color:'#b36a22' },
+  { id:1, brand:'Lattafa', name:'Yara', short:'YARA', word:'YARA', category:'mujer', gender:'Mujer', concentration:'EDP', size:'100 ml', price:499, image:perfumeAsset('yara.webp'), heroImage:perfumeAsset('yara-bottle.webp'), description:'Cremosa, femenina y fácil de usar. Orquídea y mandarina abren paso a frutas tropicales, vainilla, almizcle y sándalo con un acabado suave y coqueto.', notes:['Orquídea · Mandarina','Frutas tropicales','Vainilla · Almizcle'], tags:['ORQUÍDEA','TROPICAL','VAINILLA'], halo:'radial-gradient(circle,#f4c8d7 0%,#c87d9a 46%,#642b47 76%)', slide:'radial-gradient(circle at 64% 42%,rgba(248,197,212,.26) 0%,rgba(181,89,126,.14) 30%,transparent 52%),linear-gradient(120deg,#71344f 0%,#351528 58%,#120a11 100%)', color:'#c47f99' },
+  { id:2, brand:'Lattafa', name:'Asad', short:'ASAD', word:'ASAD', category:'hombre noche', gender:'Hombre', concentration:'EDP', size:'100 ml', price:599, image:perfumeAsset('asad.webp'), heroImage:perfumeAsset('asad-bottle.webp'), description:'Oscura, especiada y masculina. Pimienta negra, piña y tabaco evolucionan hacia café, iris, ámbar y vainilla para noches con mucha presencia.', notes:['Pimienta · Piña','Café · Iris','Ámbar · Vainilla'], tags:['PIMIENTA','CAFÉ','ÁMBAR'], halo:'radial-gradient(circle,#d4a052 0%,#7b4d1f 45%,#24180e 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(211,161,74,.22) 0%,rgba(114,73,28,.14) 30%,transparent 52%),linear-gradient(120deg,#44240f 0%,#18100c 58%,#070708 100%)', color:'#9d6a2e' },
+  { id:3, brand:'Afnan', name:'9PM', short:'9PM', word:'9PM', category:'hombre noche', gender:'Hombre', concentration:'EDP', size:'100 ml', price:699, image:perfumeAsset('afnan-9pm.webp'), heroImage:perfumeAsset('afnan-9pm-bottle.webp'), description:'Dulce, juvenil y nocturna. Manzana, canela y lavanda se apoyan en flor de azahar, vainilla, tonka y ámbar para fiesta, cita o clima fresco.', notes:['Manzana · Canela','Flor de azahar','Vainilla · Tonka'], tags:['MANZANA','CANELA','TONKA'], halo:'radial-gradient(circle,#c5becd 0%,#73677e 45%,#27202e 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(220,219,231,.18) 0%,rgba(100,74,113,.15) 31%,transparent 52%),linear-gradient(120deg,#3b263e 0%,#18121d 58%,#08080a 100%)', color:'#685c70' },
+  { id:4, brand:'Armaf', name:'Club de Nuit Intense Man', short:'INTENSE', word:'INTENSE', category:'hombre fresco', gender:'Hombre', concentration:'EDT', size:'105 ml', price:849, image:perfumeAsset('club-de-nuit.webp'), heroImage:perfumeAsset('club-de-nuit-bottle.webp'), description:'Cítrica, ahumada y poderosa. Limón, piña y bergamota dan paso a abedul, jazmín, almizcle y pachulí en un perfil elegante y muy reconocible.', notes:['Limón · Piña','Abedul · Jazmín','Almizcle · Pachulí'], tags:['PIÑA','ABEDUL','ALMIZCLE'], halo:'radial-gradient(circle,#aaa7ae 0%,#55525c 45%,#17171b 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(180,182,193,.19) 0%,rgba(76,74,85,.14) 31%,transparent 53%),linear-gradient(120deg,#302a30 0%,#141216 58%,#070709 100%)', color:'#46434b' },
+  { id:5, brand:'Rasasi', name:'Hawas for Him', short:'HAWAS', word:'HAWAS', category:'hombre fresco', gender:'Hombre', concentration:'EDP', size:'100 ml', price:1099, image:perfumeAsset('hawas.webp'), heroImage:perfumeAsset('hawas-bottle.webp'), description:'Acuática, frutal y energética. Manzana, bergamota y canela se mezclan con notas marinas, ciruela, almizcle y ámbar gris para calor y uso diario.', notes:['Manzana · Bergamota','Acuáticas · Ciruela','Almizcle · Ámbar gris'], tags:['MANZANA','ACUÁTICAS','ALMIZCLE'], halo:'radial-gradient(circle,#c7c2ed 0%,#7776ad 45%,#29324d 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(194,189,255,.23) 0%,rgba(69,90,126,.16) 31%,transparent 53%),linear-gradient(120deg,#223c4e 0%,#21172f 58%,#090910 100%)', color:'#676da1' },
+  { id:6, brand:'Lattafa', name:'Qaed Al Fursan', short:'FURSAN', word:'FURSAN', category:'unisex fresco', gender:'Unisex', concentration:'EDP', size:'90 ml', price:499, image:perfumeAsset('qaed-al-fursan.webp'), heroImage:perfumeAsset('qaed-al-fursan-bottle.webp'), description:'Frutal, amaderada y versátil. Piña brillante y azafrán abren una mezcla de jazmín, abeto, ámbar, cedro y oud con un carácter tropical oriental.', notes:['Piña · Azafrán','Jazmín · Abeto','Ámbar · Cedro'], tags:['PIÑA','AZAFRÁN','CEDRO'], halo:'radial-gradient(circle,#e1b454 0%,#8a681e 45%,#27230d 76%)', slide:'radial-gradient(circle at 64% 43%,rgba(231,181,68,.23) 0%,rgba(108,91,27,.14) 31%,transparent 53%),linear-gradient(120deg,#41330c 0%,#17170d 58%,#070807 100%)', color:'#9d7a24' },
 ];
 
 const formatPrice = value => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(value);
@@ -42,12 +44,46 @@ window.addEventListener('wheel', e => {
 },{passive:false});
 
 /* ---------- HERO ---------- */
+function heroHTML(p,index){
+  const number=String(index+1).padStart(2,'0');
+  return `<article class="perfume-slide${index===0?' active':''}" data-product="${p.id}" style="--slide-bg:${p.slide};--accent:${p.color}">
+    <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+    <div class="floating-note note-a">${p.tags[0]}</div><div class="floating-note note-b">${p.tags[1]}</div><div class="floating-note note-c">${p.tags[2]}</div>
+    <div class="wordmark-bg">${p.word}</div>
+    <div class="product-visual"><div class="product-glow"></div><img src="${p.heroImage}" alt="Frasco de ${p.name} de ${p.brand}" width="1500" height="1500"></div>
+    <div class="hero-copy"><p class="eyebrow">${p.brand.toUpperCase()} · SELECCIÓN ${number}</p><h1>${p.name}</h1><p class="hero-description">${p.description}</p><div class="price-line"><span>Precio</span><strong>${formatPrice(p.price)}</strong></div><div class="hero-cta-row"><button class="primary-btn add-hero" data-product="${p.id}">Agregar al carrito <span>↗</span></button><button class="text-btn open-details" data-product="${p.id}">Ver notas</button></div></div>
+  </article>`;
+}
+document.getElementById('heroStage').innerHTML=products.map(heroHTML).join('');
+document.getElementById('totalSlides').textContent=String(products.length).padStart(2,'0');
 const slides = [...document.querySelectorAll('.perfume-slide')];
 let slideIndex = 0;
+let slideAnimating = false;
+
 function showSlide(next){
-  slideIndex = (next + slides.length) % slides.length;
-  slides.forEach((slide,i)=>slide.classList.toggle('active',i===slideIndex));
+  if(slideAnimating) return;
+
+  const newIndex = (next + slides.length) % slides.length;
+  if(newIndex === slideIndex) return;
+
+  slideAnimating = true;
+
+  const currentSlide = slides[slideIndex];
+  const incomingSlide = slides[newIndex];
+  const direction = next > slideIndex ? 'next' : 'prev';
+
+  currentSlide.classList.remove('active');
+  currentSlide.classList.add('leaving',direction);
+  incomingSlide.classList.add('active','entering',direction);
+
+  slideIndex = newIndex;
   document.getElementById('currentSlide').textContent = String(slideIndex+1).padStart(2,'0');
+
+  setTimeout(()=>{
+    currentSlide.classList.remove('leaving','next','prev');
+    incomingSlide.classList.remove('entering','next','prev');
+    slideAnimating = false;
+  },950);
 }
 document.getElementById('nextSlide').addEventListener('click',()=>showSlide(slideIndex+1));
 document.getElementById('prevSlide').addEventListener('click',()=>showSlide(slideIndex-1));
@@ -64,9 +100,9 @@ let catalogPage = 0;
 function filteredProducts(){return activeFilter === 'all' ? products : products.filter(p => p.category.includes(activeFilter));}
 function pageSize(){return window.innerWidth <= 1100 ? 4 : 4;}
 function cardHTML(p){
-  return `<article class="product-card" style="--halo:${p.halo};--bottle:${p.bottle}">
-    <div class="product-art"><div class="mini-bottle"><div class="cap"></div><div class="neck"></div><div class="glass"><div class="label">${p.short}</div></div></div></div>
-    <div class="product-info"><h3>${p.name}</h3><p>${p.gender} · EDP 100 ml</p><span class="product-price">${formatPrice(p.price)}</span></div>
+  return `<article class="product-card" style="--halo:${p.halo};--accent:${p.color}">
+    <div class="product-art"><img class="product-card-image" src="${p.image}" alt="${p.name} de ${p.brand}" loading="lazy" width="1500" height="1500"></div>
+    <div class="product-info"><h3>${p.name}</h3><p>${p.brand} · ${p.concentration} ${p.size}</p><span class="product-price">${formatPrice(p.price)}</span></div>
     <div class="product-actions"><button class="card-add" data-add="${p.id}">Agregar</button><button class="card-details" data-details="${p.id}" aria-label="Ver detalles de ${p.name}">＋</button></div>
   </article>`;
 }
@@ -96,6 +132,7 @@ window.addEventListener('resize',renderProducts);
 /* ---------- CARRITO ---------- */
 let cart;
 try{cart = JSON.parse(localStorage.getItem('velora-cart') || '{}');}catch{cart = {}}
+cart=Object.fromEntries(Object.entries(cart).filter(([id,qty])=>products[Number(id)]&&Number(qty)>0));
 function addToCart(id,qty=1){cart[id]=(cart[id]||0)+qty;saveCart();showToast(`${products[id].name} agregado`)}
 function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0) delete cart[id];saveCart()}
 function saveCart(){localStorage.setItem('velora-cart',JSON.stringify(cart));renderCart()}
@@ -103,7 +140,7 @@ function renderCart(){
   const entries=Object.entries(cart); const count=entries.reduce((s,[,q])=>s+q,0);
   document.getElementById('cartCount').textContent=count;
   const items=document.getElementById('cartItems'); document.getElementById('cartEmpty').style.display=entries.length?'none':'flex'; items.style.display=entries.length?'block':'none';
-  items.innerHTML=entries.map(([id,q])=>{const p=products[id];return `<div class="cart-item"><div class="cart-thumb" style="background:${p.color}">${p.short}</div><div class="cart-meta"><strong>${p.name}</strong><span>100 ml · ${p.gender}</span><div class="qty"><button data-qty="${id}" data-delta="-1">−</button><b>${q}</b><button data-qty="${id}" data-delta="1">＋</button></div></div><div class="cart-price">${formatPrice(p.price*q)}</div></div>`}).join('');
+  items.innerHTML=entries.map(([id,q])=>{const p=products[id];return `<div class="cart-item"><div class="cart-thumb" style="--thumb:${p.halo}"><img src="${p.heroImage}" alt="" width="1500" height="1500"></div><div class="cart-meta"><strong>${p.name}</strong><span>${p.brand} · ${p.size} · ${p.gender}</span><div class="qty"><button data-qty="${id}" data-delta="-1">−</button><b>${q}</b><button data-qty="${id}" data-delta="1">＋</button></div></div><div class="cart-price">${formatPrice(p.price*q)}</div></div>`}).join('');
   document.getElementById('subtotal').textContent=formatPrice(entries.reduce((s,[id,q])=>s+products[id].price*q,0));
 }
 renderCart();
@@ -120,9 +157,9 @@ document.getElementById('cartBtn').addEventListener('click',()=>toggleCart(true)
 const modal=document.getElementById('productModal'); let modalProduct=0;
 function openProduct(id){
   modalProduct=id; const p=products[id];
-  document.getElementById('modalCategory').textContent=`${p.gender.toUpperCase()} · EAU DE PARFUM`;
+  document.getElementById('modalCategory').textContent=`${p.brand.toUpperCase()} · ${p.gender.toUpperCase()} · ${p.concentration} ${p.size}`;
   document.getElementById('modalName').textContent=p.name; document.getElementById('modalDescription').textContent=p.description; document.getElementById('modalPrice').textContent=formatPrice(p.price);
-  const bottle=document.getElementById('modalBottle'); bottle.textContent=p.short; bottle.style.background=`radial-gradient(circle at 35% 30%, rgba(255,255,255,.18), transparent 22%), ${p.bottle}`;
+  const bottle=document.getElementById('modalBottle'); bottle.innerHTML=`<img src="${p.image}" alt="${p.name} de ${p.brand}" width="1500" height="1500">`; bottle.style.background=p.halo;
   document.getElementById('modalNotes').innerHTML=p.notes.map((n,i)=>`<div class="note-box"><span>${['SALIDA','CORAZÓN','FONDO'][i]}</span><strong>${n}</strong></div>`).join('');
   modal.classList.add('open');modal.setAttribute('aria-hidden','false');
 }
