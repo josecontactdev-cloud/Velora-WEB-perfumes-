@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1f0b06" />
+  <title>VELORA — Perfumería Selecta</title>
+  <meta name="description" content="Demo e-commerce premium para una perfumería o revendedor de fragancias." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" data-view-link="inicio" aria-label="VELORA inicio">
+      <span class="brand-script">Velora.</span>
+      <span class="brand-sub">PERFUMERÍA SELECTA</span>
+    </a>
+
+    <nav class="nav-pill" aria-label="Navegación principal">
+      <a class="nav-link active" href="#inicio" data-view-link="inicio">Inicio</a>
+      <a class="nav-link" href="#catalogo" data-view-link="catalogo">Catálogo</a>
+      <a class="nav-link" href="#nosotros" data-view-link="nosotros">Nosotros</a>
+      <a class="nav-link" href="#contacto" data-view-link="contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar perfumes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+      </button>
+      <button class="icon-btn cart-button" id="cartBtn" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L20.5 8H7"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="viewport-app" id="appViewport">
+    <!-- INICIO: el scroll del mouse cambia fragancias, no mueve la página -->
+    <section class="app-view hero-view active" data-view="inicio" aria-label="Colección destacada">
+      <div class="hero-stage" id="heroStage">
+        <article class="perfume-slide active" data-theme="noir" data-product="0">
+          <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+          <div class="floating-note note-a">BERGAMOTA</div><div class="floating-note note-b">ÁMBAR</div><div class="floating-note note-c">CEDRO</div>
+          <div class="wordmark-bg">NOIR</div>
+          <div class="bottle-wrap"><div class="bottle bottle-noir"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-glass"><div class="bottle-highlight"></div><div class="bottle-label"><small>VELORA</small><strong>NOIR</strong><span>EAU DE PARFUM</span><em>100 ml</em></div></div><div class="bottle-shadow"></div></div></div>
+          <div class="hero-copy"><p class="eyebrow">Colección Signature · 01</p><h1>Noir Intense</h1><p class="hero-description">Oscura, elegante y adictiva. Bergamota fresca, ámbar cálido y cedro seco para una presencia que permanece.</p><div class="price-line"><span>Desde</span><strong>$1,390 MXN</strong></div><div class="hero-cta-row"><button class="primary-btn add-hero" data-product="0">Agregar al carrito <span>↗</span></button><button class="text-btn open-details" data-product="0">Ver notas</button></div></div>
+        </article>
+
+        <article class="perfume-slide" data-theme="aura" data-product="1">
+          <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+          <div class="floating-note note-a">PEONÍA</div><div class="floating-note note-b">ALMIZCLE</div><div class="floating-note note-c">PERA</div>
+          <div class="wordmark-bg">AURA</div>
+          <div class="bottle-wrap"><div class="bottle bottle-aura"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-glass"><div class="bottle-highlight"></div><div class="bottle-label"><small>VELORA</small><strong>AURA</strong><span>EAU DE PARFUM</span><em>100 ml</em></div></div><div class="bottle-shadow"></div></div></div>
+          <div class="hero-copy"><p class="eyebrow">Colección Signature · 02</p><h1>Aura Bloom</h1><p class="hero-description">Luminosa y limpia. Pera jugosa, peonía fresca y almizcle blanco para una estela moderna y suave.</p><div class="price-line"><span>Desde</span><strong>$1,290 MXN</strong></div><div class="hero-cta-row"><button class="primary-btn add-hero" data-product="1">Agregar al carrito <span>↗</span></button><button class="text-btn open-details" data-product="1">Ver notas</button></div></div>
+        </article>
+
+        <article class="perfume-slide" data-theme="ember" data-product="2">
+          <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+          <div class="floating-note note-a">VAINILLA</div><div class="floating-note note-b">TONKA</div><div class="floating-note note-c">CAFÉ</div>
+          <div class="wordmark-bg">EMBER</div>
+          <div class="bottle-wrap"><div class="bottle bottle-ember"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-glass"><div class="bottle-highlight"></div><div class="bottle-label"><small>VELORA</small><strong>EMBER</strong><span>EAU DE PARFUM</span><em>100 ml</em></div></div><div class="bottle-shadow"></div></div></div>
+          <div class="hero-copy"><p class="eyebrow">Colección Signature · 03</p><h1>Ember Reserve</h1><p class="hero-description">Cálida y envolvente. Vainilla tostada, haba tonka y café suave con un fondo amaderado sofisticado.</p><div class="price-line"><span>Desde</span><strong>$1,490 MXN</strong></div><div class="hero-cta-row"><button class="primary-btn add-hero" data-product="2">Agregar al carrito <span>↗</span></button><button class="text-btn open-details" data-product="2">Ver notas</button></div></div>
+        </article>
+
+        <article class="perfume-slide" data-theme="ocean" data-product="3">
+          <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+          <div class="floating-note note-a">NEROLI</div><div class="floating-note note-b">VETIVER</div><div class="floating-note note-c">SAL MARINA</div>
+          <div class="wordmark-bg">OCEAN</div>
+          <div class="bottle-wrap"><div class="bottle bottle-ocean"><div class="bottle-cap"></div><div class="bottle-neck"></div><div class="bottle-glass"><div class="bottle-highlight"></div><div class="bottle-label"><small>VELORA</small><strong>OCEAN</strong><span>EAU DE PARFUM</span><em>100 ml</em></div></div><div class="bottle-shadow"></div></div></div>
+          <div class="hero-copy"><p class="eyebrow">Colección Signature · 04</p><h1>Ocean Veil</h1><p class="hero-description">Fresca, mineral y elegante. Neroli, sal marina y vetiver para días de calor y noches ligeras.</p><div class="price-line"><span>Desde</span><strong>$1,350 MXN</strong></div><div class="hero-cta-row"><button class="primary-btn add-hero" data-product="3">Agregar al carrito <span>↗</span></button><button class="text-btn open-details" data-product="3">Ver notas</button></div></div>
+        </article>
+      </div>
+
+      <div class="hero-controls">
+        <div class="slide-status"><span id="currentSlide">01</span><i></i><span>04</span></div>
+        <button class="round-arrow" id="prevSlide" aria-label="Fragancia anterior">←</button>
+        <button class="round-arrow" id="nextSlide" aria-label="Siguiente fragancia">→</button>
+      </div>
+      <div class="scroll-cue">RUEDA PARA CAMBIAR FRAGANCIA <span>↓</span></div>
+    </section>
+
+    <!-- CATÁLOGO: también vive dentro del mismo viewport -->
+    <section class="app-view catalog-view" data-view="catalogo" aria-label="Catálogo de perfumes">
+      <div class="view-ambient catalog-ambient"></div>
+      <div class="view-word">CATÁLOGO</div>
+      <div class="catalog-shell">
+        <div class="view-heading catalog-heading">
+          <p class="eyebrow">SELECCIÓN CURADA · 08 FRAGANCIAS</p>
+          <h2>Encuentra tu próxima firma.</h2>
+          <p>Explora por familia, ocasión o estilo. Todo sin abandonar esta misma pantalla.</p>
+        </div>
+        <div class="filter-bar" id="filterBar">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="unisex">Unisex</button>
+          <button class="filter" data-filter="hombre">Hombre</button>
+          <button class="filter" data-filter="mujer">Mujer</button>
+          <button class="filter" data-filter="noche">Noche</button>
+          <button class="filter" data-filter="fresco">Fresco</button>
+        </div>
+        <div class="catalog-window">
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+        <div class="catalog-footer">
+          <span id="catalogCount">01—04 / 08</span>
+          <div class="catalog-arrows">
+            <button class="round-arrow" id="prevProducts" aria-label="Productos anteriores">←</button>
+            <button class="round-arrow" id="nextProducts" aria-label="Siguientes productos">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="app-view about-view" data-view="nosotros" aria-label="Sobre Velora">
+      <div class="about-glow glow-left"></div><div class="about-glow glow-right"></div>
+      <div class="view-word about-word">VELORA</div>
+      <div class="about-layout">
+        <div class="about-copy">
+          <p class="eyebrow">PERFUMERÍA SELECTA · DESDE 2026</p>
+          <h2>No vendemos una botella.<br><em>Vendemos la sensación.</em></h2>
+          <p>Curamos fragancias con personalidad y las presentamos como se sienten: mediante color, textura, notas y ocasión. Una experiencia digital pensada para descubrir, comparar y comprar sin perder el lado emocional del perfume.</p>
+          <button class="light-outline-btn" id="finderBtn">Encontrar mi aroma <span>→</span></button>
+        </div>
+        <div class="scent-orbit" aria-hidden="true">
+          <div class="orbit-line orbit-one"></div><div class="orbit-line orbit-two"></div>
+          <div class="scent-core"><span>VELORA</span><strong>TU<br>AROMA</strong></div>
+          <div class="scent-dot dot-1">DULCE</div><div class="scent-dot dot-2">FRESCO</div><div class="scent-dot dot-3">AMADERADO</div>
+        </div>
+        <div class="about-stat stat-one"><strong>08</strong><span>fragancias curadas</span></div>
+        <div class="about-stat stat-two"><strong>03</strong><span>familias olfativas</span></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="app-view contact-view" data-view="contacto" aria-label="Contacto y compra">
+      <div class="contact-orb orb-a"></div><div class="contact-orb orb-b"></div>
+      <div class="view-word contact-word">HABLEMOS</div>
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">COMPRA DIRECTA · MÉXICO</p>
+          <h2>Tu próxima fragancia<br>empieza con una conversación.</h2>
+          <p>Pregunta por disponibilidad, recomendaciones, regalos o envíos. También puedes armar tu pedido desde el carrito y enviarlo directo por WhatsApp.</p>
+          <div class="contact-buttons">
+            <a class="primary-btn contact-primary" href="https://wa.me/5218711649703?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20perfumes%20de%20Velora" target="_blank" rel="noreferrer">Hablar por WhatsApp <span>↗</span></a>
+            <button class="text-btn" id="contactCatalogBtn">Ver catálogo</button>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="card-kicker">VELORA CONCIERGE</span>
+          <div class="contact-mark">V.</div>
+          <div class="contact-card-copy">
+            <strong>¿No sabes cuál elegir?</strong>
+            <p>Dinos para quién es, presupuesto y qué aromas te gustan. Te recomendamos tres opciones.</p>
+          </div>
+          <div class="contact-meta"><span>LUN—SÁB</span><strong>10:00—20:00</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-head"><div><p class="eyebrow dark">TU SELECCIÓN</p><h3>Carrito</h3></div><button class="close-btn" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty"><span>✦</span><h4>Tu carrito está vacío</h4><p>Agrega una fragancia para comenzar.</p></div>
+      <div class="drawer-footer"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">$0 MXN</strong></div><button class="checkout-btn" id="checkoutBtn">Finalizar compra <span>→</span></button><p class="checkout-note">Demo: el botón abre un pedido prellenado por WhatsApp.</p></div>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="close-btn modal-close" data-close-modal aria-label="Cerrar">×</button>
+      <div class="modal-bottle" id="modalBottle"></div>
+      <div class="modal-copy"><p class="eyebrow dark" id="modalCategory"></p><h3 id="modalName"></h3><p id="modalDescription"></p><div class="notes-grid" id="modalNotes"></div><div class="modal-buy-row"><strong id="modalPrice"></strong><button class="primary-btn" id="modalAdd">Agregar al carrito ↗</button></div></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Agregado al carrito</div>
+  <script src="script.js"></script>
+</body>
+</html>
